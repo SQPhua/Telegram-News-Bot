@@ -113,6 +113,7 @@ def build_digest(topic: str, articles: list[dict], summaries: list[str]) -> str:
     for i, article in enumerate(articles[:DIGEST_ARTICLE_COUNT]):
         summary = summaries[i] if i < len(summaries) else article["title"]
         lines.append(f"{i+1}. [{summary}]({article['url']})")
+        lines.append("")  # blank line between articles
 
     return "\n".join(lines)
 

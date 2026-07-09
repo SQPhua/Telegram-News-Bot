@@ -3,7 +3,7 @@ name: Daily News Digest
 on:
   schedule:
     # 9:00 AM Singapore Time (UTC+8) = 1:00 AM UTC
-    - cron: "0 1 * * *"
+    - cron: "45 1 * * *"
   workflow_dispatch:
     inputs:
       topic:

@@ -34,13 +34,20 @@ GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
 
 def fetch_news(topic: str) -> list[dict]:
-    """Fetch latest articles on a topic from GNews."""
+    """Fetch latest articles on a topic from GNews, bounded to the last 48 hours.
+
+    Deliberately does NOT fall back to a wider window if nothing is found —
+    if there's genuinely no fresh coverage, main() will report that plainly
+    instead of silently re-showing older articles as if they were new.
+    """
     url = "https://gnews.io/api/v4/search"
+    since = (datetime.now(timezone.utc) - timedelta(hours=48)).strftime("%Y-%m-%dT%H:%M:%SZ")
     params = {
         "q": topic,
         "lang": "en",
         "max": GNEWS_MAX_ARTICLES,
         "sortby": "publishedAt",
+        "from": since,
         "token": GNEWS_API_KEY,
     }
     resp = requests.get(url, params=params, timeout=20)
@@ -103,19 +110,38 @@ Articles:
 
 
 def build_digest(topic: str, articles: list[dict], summaries: list[str]) -> str:
-    """Assemble the final Telegram message with today's date and real article URLs."""
+    """Assemble the final Telegram message with today's date, each article's
+    publish date, and real article URLs."""
     date_str = datetime.now(SGT).strftime("%d %B %Y")
+    header = f"📰 *Daily {topic.title()} Digest* — {date_str}"
 
     if not articles:
-        return f"📰 *Daily {topic.title()} Digest* — {date_str}\n\nNo news found today for topic: {topic}"
+        return (
+            f"{header}\n\n"
+            f"No new articles on \"{topic}\" in the last 48 hours — nothing fresh to report today."
+        )
 
-    lines = [f"📰 *Daily {topic.title()} Digest* — {date_str}", ""]
+    lines = [header, ""]
     for i, article in enumerate(articles[:DIGEST_ARTICLE_COUNT]):
         summary = summaries[i] if i < len(summaries) else article["title"]
+        published_str = _format_published_date(article.get("publishedAt"))
         lines.append(f"{i+1}. [{summary}]({article['url']})")
+        lines.append(f"   🗓 {published_str}")
         lines.append("")  # blank line between articles
 
-    return "\n".join(lines)
+    return "\n".join(lines).rstrip()
+
+
+def _format_published_date(published_at: str | None) -> str:
+    """Convert GNews' publishedAt (ISO 8601 UTC) into a readable SGT date/time."""
+    if not published_at:
+        return "Date unknown"
+    try:
+        dt_utc = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        dt_sgt = dt_utc.astimezone(SGT)
+        return dt_sgt.strftime("%d %b %Y, %I:%M%p SGT")
+    except ValueError:
+        return "Date unknown"
 
 
 def send_to_telegram(text: str) -> None:

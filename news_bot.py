@@ -105,9 +105,28 @@ def fetch_news_google_rss(topic: str) -> list[dict]:
     return articles
 
 
+def _sort_by_newest(articles: list[dict]) -> list[dict]:
+    """Sort articles newest-first by publishedAt, regardless of source.
+
+    Articles with a missing or unparseable date are sorted to the end
+    rather than crashing or being dropped.
+    """
+    def sort_key(article: dict):
+        published_at = article.get("publishedAt")
+        if not published_at:
+            return datetime.min.replace(tzinfo=timezone.utc)
+        try:
+            return datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        except ValueError:
+            return datetime.min.replace(tzinfo=timezone.utc)
+
+    return sorted(articles, key=sort_key, reverse=True)
+
+
 def fetch_news(topic: str) -> tuple[list[dict], str]:
     """Fetch news for a topic, trying GNews first and falling back to Google
-    News RSS if GNews returns nothing.
+    News RSS if GNews returns nothing. Results are always sorted newest-first,
+    regardless of the order returned by the source API.
 
     Returns (articles, source_label) so the caller/logs can tell which
     source actually supplied the results.
@@ -119,7 +138,7 @@ def fetch_news(topic: str) -> tuple[list[dict], str]:
         articles = []
 
     if articles:
-        return articles, "GNews"
+        return _sort_by_newest(articles), "GNews"
 
     print("GNews returned no articles, falling back to Google News RSS...")
     try:
@@ -128,7 +147,7 @@ def fetch_news(topic: str) -> tuple[list[dict], str]:
         print(f"Google News RSS fallback also failed: {e}", file=sys.stderr)
         articles = []
 
-    return articles, ("Google News" if articles else "none")
+    return _sort_by_newest(articles), ("Google News" if articles else "none")
 
 
 def summarize_articles(topic: str, articles: list[dict]) -> list[str]:
@@ -199,7 +218,7 @@ def build_digest(topic: str, articles: list[dict], summaries: list[str], source:
 
     lines = [header]
     if source == "Google News":
-        lines.append("_(via Google News fallback — GNews had nothing today)_")
+        lines.append("_(via Google News, as GNews had nothing today)_")
     lines.append("")
 
     for i, article in enumerate(articles[:DIGEST_ARTICLE_COUNT]):

@@ -1,9 +1,11 @@
 name: Daily News Digest
 
 on:
-  schedule:
-    # 9:00 AM Singapore Time (UTC+8) = 1:00 AM UTC
-    - cron: "45 1 * * *"
+  # Note: the native `schedule:` trigger has been removed. GitHub's own cron
+  # scheduler proved unreliable for this repo (runs firing hours late or not
+  # at all). Daily triggering is now handled externally by cron-job.org,
+  # which calls this workflow's `workflow_dispatch` via GitHub's API on a
+  # reliable daily schedule instead.
   workflow_dispatch:
     inputs:
       topic:

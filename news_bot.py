@@ -18,11 +18,17 @@ import os
 import sys
 import json
 import requests
+import xml.etree.ElementTree as ET
+from urllib.parse import quote
+from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone, timedelta
 
 # ---------- Config ----------
 GNEWS_MAX_ARTICLES = 5          # how many articles to pull from GNews
 DIGEST_ARTICLE_COUNT = 5        # how many to include in the final digest (short format)
+GNEWS_LOOKBACK_HOURS = 24        # GNews window - kept tight since this runs daily;
+                                 # the Google News RSS fallback covers cases where
+                                 # GNews has nothing fresh in the last 24h
 GEMINI_MODEL = "gemini-2.5-flash"  # fast, free-tier-friendly model
 SGT = timezone(timedelta(hours=8))  # Singapore Time
 
@@ -33,15 +39,14 @@ GNEWS_API_KEY = os.environ["GNEWS_API_KEY"]
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
 
-def fetch_news(topic: str) -> list[dict]:
-    """Fetch latest articles on a topic from GNews, bounded to the last 48 hours.
-
-    Deliberately does NOT fall back to a wider window if nothing is found —
-    if there's genuinely no fresh coverage, main() will report that plainly
-    instead of silently re-showing older articles as if they were new.
+def fetch_news_gnews(topic: str) -> list[dict]:
+    """Fetch latest articles on a topic from GNews, bounded to the last
+    GNEWS_LOOKBACK_HOURS (default: 24 hours — this runs daily, so only
+    genuinely new-since-yesterday articles are wanted here; if GNews has
+    nothing in that window, fetch_news() falls back to Google News RSS).
     """
     url = "https://gnews.io/api/v4/search"
-    since = (datetime.now(timezone.utc) - timedelta(hours=48)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    since = (datetime.now(timezone.utc) - timedelta(hours=GNEWS_LOOKBACK_HOURS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     params = {
         "q": topic,
         "lang": "en",
@@ -54,6 +59,76 @@ def fetch_news(topic: str) -> list[dict]:
     resp.raise_for_status()
     data = resp.json()
     return data.get("articles", [])
+
+
+def fetch_news_google_rss(topic: str) -> list[dict]:
+    """Fetch latest articles on a topic from Google News RSS (no API key needed).
+
+    Used as a fallback when GNews returns nothing — Google News RSS tends to
+    be indexed far more currently, at the cost of slightly messier titles
+    (often suffixed with " - Source Name").
+
+    Returns articles in the same shape as fetch_news_gnews() (title, url,
+    publishedAt, description) so downstream code doesn't need to care which
+    source it came from.
+    """
+    query = quote(topic)
+    url = f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+    resp = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+    resp.raise_for_status()
+
+    root = ET.fromstring(resp.content)
+    articles = []
+    for item in root.findall(".//item")[:GNEWS_MAX_ARTICLES]:
+        title = item.findtext("title") or ""
+        link = item.findtext("link") or ""
+        description = item.findtext("description") or ""
+
+        published_iso = None
+        pub_date_raw = item.findtext("pubDate")
+        if pub_date_raw:
+            try:
+                dt = parsedate_to_datetime(pub_date_raw)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                published_iso = dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            except (TypeError, ValueError):
+                published_iso = None
+
+        articles.append({
+            "title": title,
+            "url": link,
+            "publishedAt": published_iso,
+            "description": description,
+        })
+
+    return articles
+
+
+def fetch_news(topic: str) -> tuple[list[dict], str]:
+    """Fetch news for a topic, trying GNews first and falling back to Google
+    News RSS if GNews returns nothing.
+
+    Returns (articles, source_label) so the caller/logs can tell which
+    source actually supplied the results.
+    """
+    try:
+        articles = fetch_news_gnews(topic)
+    except requests.RequestException as e:
+        print(f"GNews request failed ({e}), falling back to Google News RSS", file=sys.stderr)
+        articles = []
+
+    if articles:
+        return articles, "GNews"
+
+    print("GNews returned no articles, falling back to Google News RSS...")
+    try:
+        articles = fetch_news_google_rss(topic)
+    except (requests.RequestException, ET.ParseError) as e:
+        print(f"Google News RSS fallback also failed: {e}", file=sys.stderr)
+        articles = []
+
+    return articles, ("Google News" if articles else "none")
 
 
 def summarize_articles(topic: str, articles: list[dict]) -> list[str]:
@@ -109,7 +184,7 @@ Articles:
     return summaries
 
 
-def build_digest(topic: str, articles: list[dict], summaries: list[str]) -> str:
+def build_digest(topic: str, articles: list[dict], summaries: list[str], source: str = "GNews") -> str:
     """Assemble the final Telegram message with today's date, each article's
     publish date, and real article URLs."""
     date_str = datetime.now(SGT).strftime("%d %B %Y")
@@ -118,10 +193,15 @@ def build_digest(topic: str, articles: list[dict], summaries: list[str]) -> str:
     if not articles:
         return (
             f"{header}\n\n"
-            f"No new articles on \"{topic}\" in the last 48 hours — nothing fresh to report today."
+            f"No new articles found for \"{topic}\" (checked both GNews and Google News) "
+            f"— nothing fresh to report today."
         )
 
-    lines = [header, ""]
+    lines = [header]
+    if source == "Google News":
+        lines.append("_(via Google News fallback — GNews had nothing today)_")
+    lines.append("")
+
     for i, article in enumerate(articles[:DIGEST_ARTICLE_COUNT]):
         summary = summaries[i] if i < len(summaries) else article["title"]
         published_str = _format_published_date(article.get("publishedAt"))
@@ -161,11 +241,11 @@ def send_to_telegram(text: str) -> None:
 
 def main():
     print(f"Fetching news for topic: {TOPIC}")
-    articles = fetch_news(TOPIC)
-    print(f"Found {len(articles)} articles")
+    articles, source = fetch_news(TOPIC)
+    print(f"Found {len(articles)} articles (source: {source})")
 
     summaries = summarize_articles(TOPIC, articles)
-    digest = build_digest(TOPIC, articles, summaries)
+    digest = build_digest(TOPIC, articles, summaries, source)
     print("Digest generated:\n", digest)
 
     send_to_telegram(digest)

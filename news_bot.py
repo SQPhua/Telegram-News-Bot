@@ -17,6 +17,7 @@ Required environment variables (set as GitHub Actions secrets, or in a local .en
 import os
 import sys
 import json
+import time
 import requests
 import xml.etree.ElementTree as ET
 from urllib.parse import quote
@@ -183,10 +184,7 @@ Articles:
     headers = {"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY}
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
 
-    resp = requests.post(url, headers=headers, json=payload, timeout=30)
-    resp.raise_for_status()
-    data = resp.json()
-    raw_text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+    raw_text = _call_gemini_with_retry(url, headers, payload)
 
     # Strip accidental code fences, just in case the model adds them
     if raw_text.startswith("```"):
@@ -201,6 +199,46 @@ Articles:
         summaries = [line.strip("- ").strip() for line in raw_text.splitlines() if line.strip()]
 
     return summaries
+
+
+def _call_gemini_with_retry(url: str, headers: dict, payload: dict,
+                             max_attempts: int = 3, backoff_seconds: int = 10) -> str:
+    """Call the Gemini API with automatic retries on transient failures
+    (5xx server errors, timeouts, connection issues).
+
+    Does NOT retry on 4xx client errors (bad request, auth failure, etc.)
+    since retrying those would just fail the same way every time.
+
+    Raises the last exception if all attempts are exhausted.
+    """
+    last_exception = None
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            resp = requests.post(url, headers=headers, json=payload, timeout=30)
+            resp.raise_for_status()
+            data = resp.json()
+            return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+
+        except requests.exceptions.HTTPError as e:
+            status = e.response.status_code if e.response is not None else None
+            if status and 400 <= status < 500:
+                # Client error - retrying won't help, fail immediately
+                raise
+            last_exception = e
+            print(f"Gemini attempt {attempt}/{max_attempts} failed with server error ({status}). "
+                  f"{'Retrying...' if attempt < max_attempts else 'Giving up.'}", file=sys.stderr)
+
+        except requests.exceptions.RequestException as e:
+            # Timeouts, connection errors, etc. - also worth retrying
+            last_exception = e
+            print(f"Gemini attempt {attempt}/{max_attempts} failed ({e}). "
+                  f"{'Retrying...' if attempt < max_attempts else 'Giving up.'}", file=sys.stderr)
+
+        if attempt < max_attempts:
+            time.sleep(backoff_seconds * attempt)  # 10s, then 20s
+
+    raise last_exception
 
 
 def build_digest(topic: str, articles: list[dict], summaries: list[str], source: str = "GNews") -> str:
@@ -218,7 +256,7 @@ def build_digest(topic: str, articles: list[dict], summaries: list[str], source:
 
     lines = [header]
     if source == "Google News":
-        lines.append("_(via Google News, as GNews had nothing today)_")
+        lines.append("_(via Google News fallback — GNews had nothing today)_")
     lines.append("")
 
     for i, article in enumerate(articles[:DIGEST_ARTICLE_COUNT]):

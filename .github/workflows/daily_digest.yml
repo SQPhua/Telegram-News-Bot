@@ -16,8 +16,6 @@ on:
 jobs:
   send-digest:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write   # needed so the keep-alive step below can commit
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -34,6 +32,11 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEWS_TOPIC: ${{ github.event.inputs.topic || vars.NEWS_TOPIC || 'technology' }}
+        run: python news_bot.py
+
           GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWS_TOPIC: ${{ github.event.inputs.topic || vars.NEWS_TOPIC || 'technology' }}

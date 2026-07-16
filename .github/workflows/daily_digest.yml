@@ -16,6 +16,8 @@ on:
 jobs:
   send-digest:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit sent_articles.json back to the repo
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -37,3 +39,16 @@ jobs:
           NEWS_TOPIC: ${{ github.event.inputs.topic || vars.NEWS_TOPIC || 'technology' }}
         run: python news_bot.py
 
+      - name: Save sent-articles history
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sent_articles.json
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update sent-articles history [skip ci]"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No changes to sent_articles.json - nothing to commit."
+          fi

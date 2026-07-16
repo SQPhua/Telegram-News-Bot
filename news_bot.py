@@ -33,11 +33,69 @@ GNEWS_LOOKBACK_HOURS = 24        # GNews window - kept tight since this runs dai
 GEMINI_MODEL = "gemini-2.5-flash"  # fast, free-tier-friendly model
 SGT = timezone(timedelta(hours=8))  # Singapore Time
 
+SENT_ARTICLES_FILE = "sent_articles.json"  # tracks previously-sent URLs so the
+                                            # same article is never repeated
+SENT_ARTICLES_RETENTION_DAYS = 30          # how long to remember a URL before
+                                            # it's pruned from the tracking file
+
 TOPIC = os.environ.get("NEWS_TOPIC", "technology")
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 GNEWS_API_KEY = os.environ["GNEWS_API_KEY"]
 GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
+
+
+def load_sent_urls() -> set[str]:
+    """Load the set of article URLs already sent in previous runs.
+
+    Returns an empty set if the file doesn't exist yet or is unreadable —
+    this must never crash the run, just mean "nothing tracked yet."
+    """
+    if not os.path.exists(SENT_ARTICLES_FILE):
+        return set()
+    try:
+        with open(SENT_ARTICLES_FILE, "r") as f:
+            data = json.load(f)
+        return {entry["url"] for entry in data.get("sent", []) if "url" in entry}
+    except (json.JSONDecodeError, OSError, KeyError):
+        print(f"Warning: could not read {SENT_ARTICLES_FILE}, treating as empty", file=sys.stderr)
+        return set()
+
+
+def save_sent_urls(newly_sent_urls: list[str]) -> None:
+    """Record newly-sent URLs, merging with existing history and pruning
+    anything older than SENT_ARTICLES_RETENTION_DAYS so the file doesn't
+    grow forever.
+    """
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=SENT_ARTICLES_RETENTION_DAYS)
+
+    existing = []
+    if os.path.exists(SENT_ARTICLES_FILE):
+        try:
+            with open(SENT_ARTICLES_FILE, "r") as f:
+                existing = json.load(f).get("sent", [])
+        except (json.JSONDecodeError, OSError):
+            existing = []
+
+    pruned = []
+    for entry in existing:
+        try:
+            sent_at = datetime.strptime(entry["sent_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+            if sent_at >= cutoff:
+                pruned.append(entry)
+        except (KeyError, ValueError):
+            continue
+
+    known_urls = {entry["url"] for entry in pruned}
+    now_str = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    for url in newly_sent_urls:
+        if url and url not in known_urls:
+            pruned.append({"url": url, "sent_at": now_str})
+            known_urls.add(url)
+
+    with open(SENT_ARTICLES_FILE, "w") as f:
+        json.dump({"sent": pruned}, f, indent=2)
 
 
 def fetch_news_gnews(topic: str) -> list[dict]:
@@ -124,31 +182,41 @@ def _sort_by_newest(articles: list[dict]) -> list[dict]:
     return sorted(articles, key=sort_key, reverse=True)
 
 
-def fetch_news(topic: str) -> tuple[list[dict], str]:
+def fetch_news(topic: str, sent_urls: set[str]) -> tuple[list[dict], str]:
     """Fetch news for a topic, trying GNews first and falling back to Google
-    News RSS if GNews returns nothing. Results are always sorted newest-first,
-    regardless of the order returned by the source API.
+    News RSS if GNews returns nothing NEW (i.e. everything it has was already
+    sent in a previous run). Results are always sorted newest-first.
 
     Returns (articles, source_label) so the caller/logs can tell which
     source actually supplied the results.
     """
     try:
-        articles = fetch_news_gnews(topic)
+        gnews_articles = fetch_news_gnews(topic)
     except requests.RequestException as e:
         print(f"GNews request failed ({e}), falling back to Google News RSS", file=sys.stderr)
-        articles = []
+        gnews_articles = []
 
-    if articles:
-        return _sort_by_newest(articles), "GNews"
+    gnews_articles = _sort_by_newest(gnews_articles)
+    fresh = [a for a in gnews_articles if a.get("url") not in sent_urls]
 
-    print("GNews returned no articles, falling back to Google News RSS...")
+    if fresh:
+        return fresh, "GNews"
+
+    if gnews_articles:
+        print("GNews had articles but all were already sent previously — trying Google News RSS...")
+    else:
+        print("GNews returned no articles, falling back to Google News RSS...")
+
     try:
-        articles = fetch_news_google_rss(topic)
+        rss_articles = fetch_news_google_rss(topic)
     except (requests.RequestException, ET.ParseError) as e:
         print(f"Google News RSS fallback also failed: {e}", file=sys.stderr)
-        articles = []
+        rss_articles = []
 
-    return _sort_by_newest(articles), ("Google News" if articles else "none")
+    rss_articles = _sort_by_newest(rss_articles)
+    fresh_rss = [a for a in rss_articles if a.get("url") not in sent_urls]
+
+    return fresh_rss, ("Google News" if fresh_rss else "none")
 
 
 def summarize_articles(topic: str, articles: list[dict]) -> list[str]:
@@ -250,8 +318,8 @@ def build_digest(topic: str, articles: list[dict], summaries: list[str], source:
     if not articles:
         return (
             f"{header}\n\n"
-            f"No new articles found for \"{topic}\" (checked both GNews and Google News) "
-            f"— nothing fresh to report today."
+            f"No new articles found for \"{topic}\" (checked both GNews and Google News, "
+            f"excluding anything already sent before) — nothing fresh to report today."
         )
 
     lines = [header]
@@ -297,9 +365,12 @@ def send_to_telegram(text: str) -> None:
 
 
 def main():
+    sent_urls = load_sent_urls()
+    print(f"Loaded {len(sent_urls)} previously-sent URLs from history")
+
     print(f"Fetching news for topic: {TOPIC}")
-    articles, source = fetch_news(TOPIC)
-    print(f"Found {len(articles)} articles (source: {source})")
+    articles, source = fetch_news(TOPIC, sent_urls)
+    print(f"Found {len(articles)} new (not-previously-sent) articles (source: {source})")
 
     summaries = summarize_articles(TOPIC, articles)
     digest = build_digest(TOPIC, articles, summaries, source)
@@ -307,6 +378,11 @@ def main():
 
     send_to_telegram(digest)
     print("Sent to Telegram successfully.")
+
+    if articles:
+        sent_this_run = [a["url"] for a in articles[:DIGEST_ARTICLE_COUNT] if a.get("url")]
+        save_sent_urls(sent_this_run)
+        print(f"Recorded {len(sent_this_run)} URLs to {SENT_ARTICLES_FILE}")
 
 
 if __name__ == "__main__":

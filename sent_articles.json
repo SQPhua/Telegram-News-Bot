@@ -1,14 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://www.thehindu.com/news/international/irans-guards-say-two-oil-tankers-explode-after-hitting-mines-in-hormuz/article71236907.ece",
-      "sent_at": "2026-07-19T01:01:21Z"
-    },
-    {
-      "url": "https://www.manilatimes.net/2026/07/18/world/americas-emea/irans-guards-say-tankers-exploded-from-hormuz-mines-as-us-strikes-continue/2386856",
-      "sent_at": "2026-07-19T01:01:21Z"
-    },
-    {
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZVJQdU1XTVhEMTYwT3lSd2RDX2tteV82OHVTVTA1TVFxcWxabVlsdjlnRDRJb1dsX0ZzN3A0XzFZVlR1NGdGeE9WSGs4NVN3alNZeENHWkhXeXYtSGVNTUU4RVZWcFBQM1pUeWNRUG43Y2ZPUzdwWWtlTF9zaVUyZ294NWltWnFTUXlOT3pWeVJHMmZfRzFQaGQyc1hjWjFEU0x2Q1JELVVnQzJpMjJ4blpBaTdkV3ljZ05aMU1YWW5OU1HSAcsBQVVfeXFMT1hZSjhyUWtYZE1PM0E4aHBUY3d3LVV4bDA3M1lRYWxWM0JMeGUyRVhxMU1hbWZGYmZlQ0taSkhueE11X3MtcFZhbEZzLWpkaEcyeEdLekduTU43YXZGQ2VQc3Axb0RaTVp4Vmc5TVZDY2RXNzM3MTVReER1U1pDMy1mdjhrbnAyckNlaXVaSjVER3FNQ0E1RXFqVlJxT2E2T3VSdEJ4MmxwcDQ4cjFpX2FQdzNERVRqakpDWEZYSGxBTlZJM1J2YVJkRWc?oc=5",
       "sent_at": "2026-07-20T01:00:55Z"
     },
@@ -155,6 +147,18 @@
     {
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdXBWZUlZZXRBVmZJbkkzMVNLUXNTSXhnT1B1MG9wc0docEt1enl6ZmtRMEpSd3NFSk1XemVSTG42VEtzNjNuRGxFUnBRY3h4dVBHcmNnWVR0QWZiOFVQLUVJY01DbXJxMm1qNmlIeEswamprNmxHSHg0aUNCOU9uNEVsMDU5U1BDWkFoRkNrWWFHSnlw0gGaAUFVX3lxTFByaU8zMXlUQTVSQXJkanZJN0haZlNQTTFOTkxaaWhJeU9WUmp6bnhWR01JeW5Sd1dnVzk4N2V3VVJMamNmakRtcGE4OFBVTkg4dUZjalVxbWF1VG13N2FIcTdvUVc3bWFzbE13dko1aVNFbG1Jb3EzS2xFOEdfb3pRUi0wQXQ3TU9Uay0xNHdFYjA5WEhic3Nlbnc?oc=5",
       "sent_at": "2026-08-18T01:00:40Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOQklhN1BFSm9pc0lRbmxpRWVZRFpnbHBmLUJyeV9UYmtNWHVyLVVrakRIM000ZmFKLVBDaU05NXV0YVZqNGptRmhMZkh4SHZ2LUZiUTdDVURwckxhbTlNQ2YyVGZsOVFma0gwQ0lNVU5KVEdtR09UZ1RSQy03b3hhYXQ0RHdnbjVqVjAwRnRNTENVWjA?oc=5",
+      "sent_at": "2026-08-19T01:00:39Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNQll2LTZWcThSeTZYWjFBZXE0dVUxSl95V0RVdVhyVGRoZ2x3U28xcmxLWkFEN3ZVSnV1TVZaamh1UHBJd28xT19LN1JBNXdydndscmVqUHBPSUtkaXdBbFRyTnJKZGNlSmtQUnNhX0pka1VKS2xHVEdrTkd6U1o5MFd30gGHAUFVX3lxTE9JSG4tT1c5eF9DUEtCeVF6V1pYWnUtai1uY2hnNERGZ25hR2Y0OHBKR2l2b1dtcEhpaDRxWmdYMWlYMFUzRUJWb0VXTE0wUUczbktXV0Y2alc2RzdfT3hZU1FIUHVreFE0aDNvUS1mSTRBNmk0MEZReWZya3BybHhxTUhPN0RiVQ?oc=5",
+      "sent_at": "2026-08-19T01:00:39Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQktYX0J0R2hzNlc5bXNxTEp2QlNHeDdvQUIwYnk4dVJZdmpEeEJoTERxUXJ6ZVFlV1pZTFV0VlZEeHpqUHNpQ0lJZ2wySzUzMzNabWxKX0VDZGFVNjhRd29IeEZPVWctdGw2RWhWcXNjUVFJWHJiS2swYTVmYWpjNWxsY28yVEh1dU1uRFB1c0Y4cnFMRWpHMXpMWVpVenZTY2IxYzhObGRqWlVhM2RIS0lZVkxzNHhhNlZnUXJmZFpXN0pQVktjWHdkQ1JwWldWQVZZRVAtelBWaHc?oc=5",
+      "sent_at": "2026-08-19T01:00:39Z"
     }
   ]
 }

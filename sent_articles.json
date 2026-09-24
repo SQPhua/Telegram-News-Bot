@@ -1,26 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://www.newsbytesapp.com/news/world/iran-might-be-losing-control-over-strait-of-hormuz/story",
-      "sent_at": "2026-08-20T01:00:53Z"
-    },
-    {
-      "url": "https://www.moneycontrol.com/world/trump-says-no-talks-with-iran-tehran-claims-hormuz-to-stay-closed-till-demands-met-videoshow-14010035.html",
-      "sent_at": "2026-08-20T01:00:53Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZVpZLW1FcU1ncFRLWjNYRjQzbGFHcU9jVllwYWhJWmsydTJSTjhKVjItMXZYRUtWYmZoY2NLQjJMbFpDX0tpWmQySTFjdHdFeWNLRDNaXzJNbUxEeWU0dEEtMEZKWUpuVFI1WXpUNDVkZVc1YUFUYy1jbUVJT0VtU0ZadFl5Ul8wX0s3cg?oc=5",
-      "sent_at": "2026-08-21T01:00:44Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPbHgteFJ1NW1PU1RNVFp1MkZNTGxtaU01cG1tMUQ4djFhU1JSRDRTNWRfYnZaR055eEg0elVIYW8xajNpX19sTFZIZGtkRHc0RFh4Z2hfeEZBcXA1d2tzVEZyTHhnUXZkVlZ2RllsZWFJempLcEV0bk84dzJjYnFnTEpzdldQXzBGel9BQTVrb1ZTTmJOcldLcW5LM1hqRVFkNWVzWA?oc=5",
-      "sent_at": "2026-08-22T01:00:39Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNX29sNW9VS0hYeG1jQUN6VFhEenEzcDZVc3I1SzdhRGFlTm43RVNLWl9aclVQQlJrd2g5UHQ2WFgwZjQ2eXBQMFBzTl9vZWRJeVNjcWo4WDZ2RTZpaVRDS25uX2lKdkxOWlgxZEhuNXZORTFpZHAzT0VvV2xLUUZ0UHZpMkhVN2F3Tl9GRnNNdUdRclJOc0stWUx4dl9wRU93TGVBTzA3UlpzcUk4SnJMZ3ZBLW8zamV5MGQxZDR2S2hKQm9JYWlSNEJUNFhUaG9kQVJwNjk2TEY1MElmSURONA?oc=5",
-      "sent_at": "2026-08-25T01:00:40Z"
-    },
-    {
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1tNi16cVlvMnN2YWdPQWdTOVdLYTFYVmFsRE5haGxwWS01blp5eFR0R0JUbi1ZMHJkRk44bnY1RnVrM3QzczI0RjNydDNqUTc1Nnl0QXp5ZjIwdw?oc=5",
       "sent_at": "2026-08-26T01:00:43Z"
     },
@@ -239,6 +219,14 @@
     {
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMzRPSjlIQTd4QndKdm9CUHk1ZWxIaktfOERjc1A3VHpYMHV0Z1Zkd3dGNURqMFJFR3l4LXo3OU5scG96QXhMd0F5TGthdlVzbmg0QVVHbnktU096TkFWUnc5QU9UV0xvTk1jbDY3eGFJaWZXN19UOEJvbTF6eFdFcW13cWxwdWRDVzU1OEl6c2ctT3ltYVJZN0d1a3hvQdIBowFBVV95cUxPUktnalZhVFFxNkhBTHFVS0tOSVBzVE5rZWFhcHhQUVk5dnlocFVZQWdNeHlNQ2pwY0ctTHp6dkQ1WFh1djJsUkQxZ3RZR3NkbVVJOWNCNTFqdFl5eUpMc044SVlwQVMyeldla2VYZ2FxVG5ud1RvTVlKNVc1d0FMNjZSemNubmdydW5BRE1peGVjdmJNSFF5QVZ2OGtNMTVHY09B?oc=5",
       "sent_at": "2026-09-18T01:00:40Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMzRPSjlIQTd4QndKdm9CUHk1ZWxIaktfOERjc1A3VHpYMHV0Z1Zkd3dGNURqMFJFR3l4LXo3OU5scG96QXhMd0F5TGthdlVzbmg0QVVHbnktU096TkFWUnc5QU9UV0xvTk1jbDY3eGFJaWZXN19UOEJvbTF6eFdFcW13cWxwdWRDVzU1OEl6c2ctT3ltYVJZN0d1a3hvQQ?oc=5",
+      "sent_at": "2026-09-24T01:01:16Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNS1RBTW5JdlVlNkFmX21kckQ4MkFTNW1TelN2OE9aU195cjRBN1FPRW55STlCRnI3V1RFTFlLWTk0VG1TWXhyaXB5NVlvR1h0aEtLNUFjZF82bFpBYVd2bkowY0RtZC1rUFZMRmxxMHR2eFdjU1NleFJWYllRb3dkcVVaMFBkNnpncllNdlh1R29lNWV2eGw0QXNrRlRsa1J3X2RlNGpBbnZvUHdvUEtXc1JjZ2twWHN6TldOM2p5dUJuTE4wY0FkTA?oc=5",
+      "sent_at": "2026-09-24T01:01:16Z"
     }
   ]
 }

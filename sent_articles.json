@@ -1,74 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Says-Supertanker-Hit-by-Mines-in-Strait-of-Hormuz.html",
-      "sent_at": "2026-09-01T01:00:44Z"
-    },
-    {
-      "url": "https://www.foxnews.com/politics/inside-dangerous-us-mission-cleared-irans-mines-hormuz-shipping-lanes",
-      "sent_at": "2026-09-01T01:00:44Z"
-    },
-    {
-      "url": "https://www.thejc.com/news/world/us-and-iran-exchange-fire-for-the-first-time-since-july-j39559sv",
-      "sent_at": "2026-09-01T01:00:44Z"
-    },
-    {
-      "url": "https://www.upi.com/Top_News/World-News/2026/08/31/iran-supertanker-Hormuz-mines/1101788151399/",
-      "sent_at": "2026-09-01T01:00:44Z"
-    },
-    {
-      "url": "https://www.newsbreak.com/upi-news-510013/4858385080649-irgc-says-ship-struck-2-sea-mines-after-u-s-declared-hormuz-cleared",
-      "sent_at": "2026-09-01T01:00:44Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQkJhNDBNOW00TjJ1ZjdIQ3BmSHJpSEVEVTVKMkNaRksxaDByenc5V2pRZVd1WENGVFA3WVgwbXhfNHd6UWxxZTRzZnp2amJ0cHBZWEY5d2k1TkNabjEzbVM5RVQwQVU2TUUzQjA0OXdub2NmNG1iTHhMcUFFY3Q0VElYZ0hxZzg?oc=5",
-      "sent_at": "2026-09-02T01:00:52Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdVp4TUZwdzl1RkRLWjNXR19ad1FWRWZ6by1YMUxNck1XX3R0MDB5OUc0cDE0SmszaUdRS0VWaDJVaDEzXzlqQzl2WkNoODZJeWRTTXVBM3dmbmZSekFrNTZ4VUZ1X3FHSGV6WW9xaGNTTnViUGxGYWs3dnQ1bHV4U1lfYlptOHIyWERKNE1DS09EaFYwc0tpOUlJUVNzdEZQbXBYUzZn0gGrAUFVX3lxTE9CMkdLYTRQNkJadk55dXBSRnFGLVZDWHNQNm8wcF9mc1FONHZzUnVVbnVwYTRDRnRIejFMUEVKWkQ1SmhwbGptRC1HY3djYW1JQ1VRMTlseTJ4TnJyOVMxOFBFTUJ0VGVBVWdsajRMcXdxUFlDTVl4LTMxNmM5bkhzVzZfdlRpUUZjME96aF9wWUFLcHBFSEFNdnBqVFhaOUJXakx2ZUZVYkpmRQ?oc=5",
-      "sent_at": "2026-09-02T01:00:52Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZW53Wk53Q0pZRGRqTzF5amR1YlNZTWlwbWJuQm5OM19rSnVQWGNCMXo4RUM4TEpVZ3RoYUJPNDd2MnZFY083RUEta3d5LVAzMVdNNWpuVlVocHhVRld4T0JjNUE0bUl3RER3UDMxc01HNERfQzEwNFNsZ0ZtNnNGQkxwYWt1NmF5Zm5FUmlxWXJZUDI5NGowcjdLZVV6YXFGNGFSbFB4NFpqUUtYVlZXMVhsT0NuN2lQ0gG-AUFVX3lxTE5uZmllS2V0alRRUzM1T2FQYjR5dURsLWVKc3ladkFHUUhZS3FmenhqUXZQdDRjbl9DU2ZybjRKM2ZoSjBjMC1aNm96amtRQUl6eEFLZjZIaEI5OHJUY0s5RE5OSVVaejMzTGpEYi1MYWw1LVI2UkJXUVhxNVByS0NhYlRqa2FCTG5CdkVUUElTcHVCYTdtR2tuTFNLb3g5ZjVXYmNJTFpDbEF6RUQ2N2h1NU10Y1BvZXZqNXVIUnc?oc=5",
-      "sent_at": "2026-09-02T01:00:52Z"
-    },
-    {
-      "url": "https://www.europesays.com/3228829/",
-      "sent_at": "2026-09-03T01:00:49Z"
-    },
-    {
-      "url": "https://www.middleeasteye.net/news/iran-strikes-us-bases-across-region-after-american-attack-kills-18-including-children",
-      "sent_at": "2026-09-03T01:00:49Z"
-    },
-    {
-      "url": "https://www.nation.com.pk/03-Sep-2026/iran-claims-new-naval-mines-laid-strait-hormuz",
-      "sent_at": "2026-09-04T01:00:49Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONkdfTWVQTVdSZUV0WExHNEpESWZaMm1MMGVTRTVaZHRJalZhcmhSMlZkcTF2TkVlc25MV210cUNBelFNSFZtdWZ4R1FyaXV2VER5NU8zRVFHQU1QaFlJSDRSaW9jcG1QUUdhOGQ1dUlqUzlxUVNxb0xvX3VBQ1c5eUsta1VHdFZtREowWUlGYW5yWi1Tam9wcmstQ3Y4NXJvOHVSWlloYndhZm81SUl2RHVVRVh5R1ZfRDVXanRFT1Vibnc?oc=5",
-      "sent_at": "2026-09-05T01:00:41Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbnZuUzhDTnJ6bWRuM1Q0T0tpNXJXQzBrczR6X05yQXROSnBxWFdSV3RzT2xPV3JpckxoOVpleXp1YTgxemtSY1BVb0dEVmQ4ZUlpU2RoMVNTejZYRFIyUnRPZ05vOC1aUHQtSlNYTDhNSXoxZG81T0RDaE9QVUVYbnVuNTh5U1RaX0pRejZlelBSVnBaRmJkbDN4SkV4MmVzZjhxVmdfMA?oc=5",
-      "sent_at": "2026-09-05T01:00:41Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaFpkVzJhSEhqNlBNMnNDdEJKdHFoaFhaQlBPUU9lSE1WWFBxcGs4eHlXeWh6SEFmNnRkY2dvbFN5eHhLQS1fNUt2MVlONjBkNzBRQ1ZieHN5ZzVMd0ktQWUzRHNoQ0dBOEFDTmVaa1gwTG1TbUVhNzZwQnRSS3NPU0dLdDkzeXVD0gGOAUFVX3lxTE16RHFxR29aLU5LTDlSSFRadW5zejBmcWkxVXlGRGowcGpXYTA1b2xGZzREMGhEdVJrRW0wMkpxMG5oejZTaFg0c3RnLUw2c1V4Sm00TXdHNjVsSXhTVFhLZjg2c2NJWUExVGJjeWwydXZ5Tlo5M3Z3RV9VdFZyQVd6S1RaZi04YUgzSFNtTmc?oc=5",
-      "sent_at": "2026-09-05T01:00:41Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1EY3RoMm1jVGJqbE9wUzhGTURIOVFURmxoMmVNOEl3WC1CTlVtOXhYd2NJQUVtVEphVEMwNzJCQmlXdTFaY1FsSmJMSlZ6dmVsZHJPZnhZdS1SMjRidHkzaVE2aXladkRPRHpFNGNFZmpNNVhnSXFULW96aGV3UQ?oc=5",
-      "sent_at": "2026-09-06T01:00:43Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQnNQdTZrdjVOQmRpQ0dHZnNrNWdPaFVzTF94cTlOSWpWeW40aUxfMVRabVNJdldxQkF5UDR2UUMzUXBMWDZyYzVDWGxfSE5tVExmUjRQWEFueEN1cTdsQjI5VFJJZHJ4clB5ZExQQ0tKX3RSS1BJR2xoclE2dVdXZk9odUNSdzlOU3djaEFPMDRCQXV5NzZ2anJWbE1ILVJ4cjJZbk9YRGRScWx4WEZB0gG0AUFVX3lxTE13Sm9DOXQ2TW8wX2g3Nk85eTg5d1gxVEhwTDJxLUpKM25XOWota1dEZXVYRG9nV29FdVVBRFdRNTV1eGJzX3JkWWVRV05VR2VPYjM3RTJWeko0WjZYMjczLUZmN05xdDhIYU5uakh3NzZvVTFjdVhMb3poZEJjUEpiUmdCVVFfWkpRWkNyc0o3LUVaNWZodVJHSGk5M2hJUzJGNnNnQ2stcnZwWGpwTWhJNDFaRQ?oc=5",
-      "sent_at": "2026-09-06T01:00:43Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPS19wRUtuOWoxb1FaQThyT09PWGI2bEJtOW1wZGFHMlBFSEF5bUEtTXpsTnNaeEY3dWxIamRid192dl9CcFZ6OHh6ZVJpWGJtcVc1YUdSMXl5c3JIZmtwYlY1c3A4WUY5MDdLY1JQTmUxN29jQTdtVk5SeVo5S2x0bDJzWUxBQ1B0cDlISl9sMFRqcE5qVnZDWjFGd3k3aGJPNURFV05adWRDLWdjUG1uREJkSHBUMi05WkloWkc2U2RKUUh2WVRkYjhSWldWSHQ1VHp0ZjliajFTQldKNVdNQkNkRmR6MXE4NUdqb2FXNA?oc=5",
-      "sent_at": "2026-09-06T01:00:43Z"
-    },
-    {
       "url": "https://timesofindia.indiatimes.com/world/middle-east/can-the-us-really-make-hormuz-safe-the-dangerous-battle-against-irans-sea-mines/articleshow/133833524.cms",
       "sent_at": "2026-09-07T01:00:37Z"
     },
@@ -151,6 +83,10 @@
     {
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5CQnFISHVWNTZrS1VjczhuTndyUjR5Y3dxenFUYmVaS2czcm1pS2pGNHIyX1RDSDg4elo4X1VoUVkyV0VPTGNjbndIZnI3QS1vMktISDR5MVhYalk?oc=5",
       "sent_at": "2026-09-30T01:01:31Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZzREeGZUcl95WmtZRGZabUR3NXhwWFNiallMWG83WUhETlQxVVliRDhfcTlIcHJNdnRwa2VXcUNhcE5WZFNjdS1BejZKU1RtY2RuWUU2TDlUSG5YNURneWkwSXB4cjhyb2lmbV9BXzlnSG1nMmEwMkQzUDJRdWYwQ2g2aTIyVGpjSW5JS3oxeEMxbGdRd0pfZW9vcUk?oc=5",
+      "sent_at": "2026-10-06T01:01:27Z"
     }
   ]
 }

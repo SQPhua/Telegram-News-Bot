@@ -1,14 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMzRPSjlIQTd4QndKdm9CUHk1ZWxIaktfOERjc1A3VHpYMHV0Z1Zkd3dGNURqMFJFR3l4LXo3OU5scG96QXhMd0F5TGthdlVzbmg0QVVHbnktU096TkFWUnc5QU9UV0xvTk1jbDY3eGFJaWZXN19UOEJvbTF6eFdFcW13cWxwdWRDVzU1OEl6c2ctT3ltYVJZN0d1a3hvQQ?oc=5",
-      "sent_at": "2026-09-24T01:01:16Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNS1RBTW5JdlVlNkFmX21kckQ4MkFTNW1TelN2OE9aU195cjRBN1FPRW55STlCRnI3V1RFTFlLWTk0VG1TWXhyaXB5NVlvR1h0aEtLNUFjZF82bFpBYVd2bkowY0RtZC1rUFZMRmxxMHR2eFdjU1NleFJWYllRb3dkcVVaMFBkNnpncllNdlh1R29lNWV2eGw0QXNrRlRsa1J3X2RlNGpBbnZvUHdvUEtXc1JjZ2twWHN6TldOM2p5dUJuTE4wY0FkTA?oc=5",
-      "sent_at": "2026-09-24T01:01:16Z"
-    },
-    {
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5ZOEVaSFlaQVNZMFI2b3l1ZnBINml6dG1QRlFQVkh0RnNfdzdjSHo1MEticENTODlDN29iQ1ZiSmZMYlpIWFEwZHNNV3hhSkxoT2c?oc=5",
       "sent_at": "2026-09-27T01:00:51Z"
     },
@@ -143,6 +135,10 @@
     {
       "url": "https://www.cp24.com/news/world/2026/10/22/iran-says-7-oil-tankers-are-on-fire-or-damaged-in-a-key-strait-as-fears-grow-of-a-return-to-war/",
       "sent_at": "2026-10-23T01:00:50Z"
+    },
+    {
+      "url": "https://www.sbs.com.au/news/article/seven-oil-tankers-reported-damage-in-strait-of-hormuz-in-largest-single-day-record/by3xh73ou",
+      "sent_at": "2026-10-24T01:01:17Z"
     }
   ]
 }

@@ -1,10 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5CQnFISHVWNTZrS1VjczhuTndyUjR5Y3dxenFUYmVaS2czcm1pS2pGNHIyX1RDSDg4elo4X1VoUVkyV0VPTGNjbndIZnI3QS1vMktISDR5MVhYalk?oc=5",
-      "sent_at": "2026-09-30T01:01:31Z"
-    },
-    {
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZzREeGZUcl95WmtZRGZabUR3NXhwWFNiallMWG83WUhETlQxVVliRDhfcTlIcHJNdnRwa2VXcUNhcE5WZFNjdS1BejZKU1RtY2RuWUU2TDlUSG5YNURneWkwSXB4cjhyb2lmbV9BXzlnSG1nMmEwMkQzUDJRdWYwQ2g2aTIyVGpjSW5JS3oxeEMxbGdRd0pfZW9vcUk?oc=5",
       "sent_at": "2026-10-06T01:01:27Z"
     },
@@ -235,6 +231,26 @@
     {
       "url": "https://www.clickondetroit.com/news/world/2026/10/29/iran-says-3-oil-tankers-struck-mines-and-other-mideast-news/",
       "sent_at": "2026-10-30T01:00:55Z"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/iran-guards-say-halted-3-tankers-after-incidents-in-strait-of-hormuz-12259486",
+      "sent_at": "2026-10-31T01:01:26Z"
+    },
+    {
+      "url": "https://www.ajc.com/news/2026/10/iran-says-3-tankers-strike-mines-and-catch-fire-in-strait-of-hormuz-and-other-mideast-news/",
+      "sent_at": "2026-10-31T01:01:26Z"
+    },
+    {
+      "url": "https://www.ajc.com/news/2026/10/saudi-arabia-says-drone-intercepted-near-islams-holiest-city-and-other-mideast-news/",
+      "sent_at": "2026-10-31T01:01:26Z"
+    },
+    {
+      "url": "https://www.nzherald.co.nz/world/iran-says-four-tankers-on-fire-after-hitting-mines-in-strait-of-hormuz/ITK3VK3F3NATBEMVAJVLYKUWEY/",
+      "sent_at": "2026-10-31T01:01:26Z"
+    },
+    {
+      "url": "https://www.malaymail.com/news/world/2026/10/30/four-tankers-ablaze-in-strait-of-hormuz-as-iran-disputes-us-claim-that-sea-lanes-are-mine-free/241195",
+      "sent_at": "2026-10-31T01:01:26Z"
     }
   ]
 }

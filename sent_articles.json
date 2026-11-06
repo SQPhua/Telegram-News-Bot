@@ -1,10 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZzREeGZUcl95WmtZRGZabUR3NXhwWFNiallMWG83WUhETlQxVVliRDhfcTlIcHJNdnRwa2VXcUNhcE5WZFNjdS1BejZKU1RtY2RuWUU2TDlUSG5YNURneWkwSXB4cjhyb2lmbV9BXzlnSG1nMmEwMkQzUDJRdWYwQ2g2aTIyVGpjSW5JS3oxeEMxbGdRd0pfZW9vcUk?oc=5",
-      "sent_at": "2026-10-06T01:01:27Z"
-    },
-    {
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9va1JQWnZ4dEZoTTQwSzhwa0E5MnpRMTBkaXp0THRHYW80cHdwMGw1RXYzYllUTzh2MmlrY1dDMjVfTEdGeUVMZmhfdHdfU3Ayc0VITm9zeGxjQUllLVhPdEZrY05LWkwxdmhPQ1FNZDE0NGt5Z1E?oc=5",
       "sent_at": "2026-10-08T01:00:49Z"
     },
@@ -299,6 +295,26 @@
     {
       "url": "https://www.livemint.com/global/iran-turns-to-guerrilla-tactics-in-bid-to-reassert-grip-on-strait-of-hormuz-11793755676591.html",
       "sent_at": "2026-11-05T01:00:46Z"
+    },
+    {
+      "url": "https://www.manilatimes.net/2026/11/05/world/tanker-struck-by-projectiles-in-the-persian-gulf-off-qatar-and-other-mideast-news/2462862",
+      "sent_at": "2026-11-06T01:00:50Z"
+    },
+    {
+      "url": "https://www.republicworld.com/world-news/tanker-hit-by-two-projectiles-off-qatar-as-iran-reports-three-ships-striking-mines-in-strait-of-hormuz-2026-11-05-140486",
+      "sent_at": "2026-11-06T01:00:50Z"
+    },
+    {
+      "url": "https://www.ajc.com/news/2026/11/tanker-struck-by-projectiles-in-the-persian-gulf-off-qatar-and-other-mideast-news/",
+      "sent_at": "2026-11-06T01:00:50Z"
+    },
+    {
+      "url": "https://www.usnews.com/news/world/articles/2026-11-05/tanker-struck-by-projectiles-in-the-persian-gulf-off-qatar-and-other-mideast-news",
+      "sent_at": "2026-11-06T01:00:50Z"
+    },
+    {
+      "url": "https://www.middleeastmonitor.com/20261105-iran-says-4-oil-tankers-destroyed-by-sea-mines-in-strait-of-hormuz/",
+      "sent_at": "2026-11-06T01:00:50Z"
     }
   ]
 }

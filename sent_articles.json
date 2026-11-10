@@ -1,18 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://www.ndtvprofit.com/world/tankers-hit-mines-several-heavy-explosions-reported-in-hormuz-12159878",
-      "sent_at": "2026-10-10T01:01:17Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBvYmd5ckFKUXByVmpSYm5SVUdhOUp4bHhCcEJRcUU1cElSWm1zMlJCMzNPQ0oybWxOWGU4eU15aE9vb2F1UEtkZHhjaEhCSU9VT2U2dWdJaHVBem5OZjJXTHloQmxqTm1tTko1NFpxRQ?oc=5",
-      "sent_at": "2026-10-11T01:00:47Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1tNi16cVlvMnN2YWdPQWdTOVdLYTFYVmFsRE5haGxwWS01blp5eFR0R0JUbi1ZMHJkRk44bnY1RnVrM3QzczI0RjNydDNqUTc1Nnl0QXp5ZjIwdw?oc=5",
-      "sent_at": "2026-10-11T01:00:47Z"
-    },
-    {
       "url": "https://www.lokmattimes.com/international/irans-irgc-says-violating-supertanker-exploded-after-hitting-mines-in-hormuz-strait/",
       "sent_at": "2026-10-12T01:00:49Z"
     },
@@ -343,6 +331,10 @@
     {
       "url": "https://www.freepressjournal.in/world/iran-strait-of-hormuz-tensions-escalate-as-explosions-rock-qeshm-island-2-oil-tankers-reportedly-damaged-by-mines",
       "sent_at": "2026-11-09T01:01:00Z"
+    },
+    {
+      "url": "https://www.freepressjournal.in/world/iran-says-violating-oil-tanker-catches-fire-after-hitting-naval-mines-east-of-strait-of-hormuz-video",
+      "sent_at": "2026-11-10T01:01:09Z"
     }
   ]
 }

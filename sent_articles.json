@@ -1,10 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://www.lokmattimes.com/international/irans-irgc-says-violating-supertanker-exploded-after-hitting-mines-in-hormuz-strait/",
-      "sent_at": "2026-10-12T01:00:49Z"
-    },
-    {
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRDhqelFLTG1uLS0xaWxRRVdTYVhPcFMzR0lVT2QzUklpRVYyUGd3clFvVVQwUjZrWjVGUWMySUs0TnoySktOZ3REVjRrU0tWU0ZkSlRkTE03eFlGS0JpOTd2a3dRV1NSSmJscE9nSnIxZ0xCRE40Y2VoS2NzLV9FdHQzck03V0RxQWtTVlNUWUdaQVB4WTdZeTB3eW51bWZmdDY3QnV0OHJDbHVqTGo5UzRtUW1JQTFyYllTOUJNbU1WZw?oc=5",
       "sent_at": "2026-10-13T01:01:02Z"
     },
@@ -335,6 +331,10 @@
     {
       "url": "https://www.freepressjournal.in/world/iran-says-violating-oil-tanker-catches-fire-after-hitting-naval-mines-east-of-strait-of-hormuz-video",
       "sent_at": "2026-11-10T01:01:09Z"
+    },
+    {
+      "url": "https://www.ajc.com/news/2026/11/israeli-strikes-and-gunfire-in-gaza-kill-5-people-and-other-mideast-news/",
+      "sent_at": "2026-11-11T01:01:10Z"
     }
   ]
 }

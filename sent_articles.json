@@ -1,30 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRDhqelFLTG1uLS0xaWxRRVdTYVhPcFMzR0lVT2QzUklpRVYyUGd3clFvVVQwUjZrWjVGUWMySUs0TnoySktOZ3REVjRrU0tWU0ZkSlRkTE03eFlGS0JpOTd2a3dRV1NSSmJscE9nSnIxZ0xCRE40Y2VoS2NzLV9FdHQzck03V0RxQWtTVlNUWUdaQVB4WTdZeTB3eW51bWZmdDY3QnV0OHJDbHVqTGo5UzRtUW1JQTFyYllTOUJNbU1WZw?oc=5",
-      "sent_at": "2026-10-13T01:01:02Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORWVPUHBLV2F5SnJablI2Vk9adC1JR29uMTBDM2xVM0pDaEtnNDJhUzVrcnF3NHI1a0ZpN0s2QVBWQ3R1b3hZckpCcjkzbDkxRFgzZXRxWC01amZ2YS1TNl9jY2ZTRjNrV1prZDVaRzlZUVBpdERtUG8tcFZielhIbFh3VUtqOFpDSzh0SmphdVlQaTNxSlhFLVRCc1djcTdHblhsODBfNUIzRGd6MmxVd2EtZEZ2RFRRTXpuRXVIc0Z5WmtPS1dfMF9HS21KLUplQUE?oc=5",
-      "sent_at": "2026-10-13T01:01:02Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPNmkwVmFLV1RzWEpBQ0ZucUlJZ05hOVpBd1h1b1dycWJkc1JZTHcwUzZWWU02WkY2NV9JUktkNEphTUdrclJLM0ZlTmlYUTBWUDY0UzFSclBKVmdPMk9uNWlzMldYM0hibVBldWdsaExJYWQ5THpZLTNGZjhka25XS1pPWEsyWS1yREJvN0twSVZQckRoSVFnX2FlWWl0Vk5iaUwyajdscHZBcU95WTUwZ0c4NldnSkhQWkhSZUhR?oc=5",
-      "sent_at": "2026-10-14T01:00:58Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNTlBmLXhuZnM2bndSYWdsNXFqelFSaU9GY3JZRklwYVFnbE9saG1LUGY5TFJZZGY1b3hMSjJoaWNra25aR3FJU0NvUXJjczJKWDJNeWZERHI5ZU05UmhsWExoZlZRZFN3SS03QmVZTmQtZnFyQVA4WVZBUVVtdmVfUDVR?oc=5",
-      "sent_at": "2026-10-14T01:00:58Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQk9TQ0lXdlVGdHh2aXh1dGFoV3ljUzVXN3Z0bnI1QUZRWDJFQjNvMDNpMjZ2YTk2RXU1WFoyTldQZkdZUWtnMmszUFlxUTNhTnZFcllJYTFmUmc3LURjWXJWVFZ6TllmdFV1VklpNHhDS05nREJaelN5bkpwWEx0bXBneWNnQVFpQldGb0xVMjJfcTdXSGNnYnJ4cUpFeE5Mb3VwWFdNaDBkcWptUGtHeDF3?oc=5",
-      "sent_at": "2026-10-14T01:00:58Z"
-    },
-    {
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPS2Y5aU04dGtyX1ZBTXV1RFJyQS1zcXMxNzlFLXh2NDRVZmJMVWRiLXVtbktZbkY4b2t2NDZVWWFSSng0MFBrLUxCcXJELTNoZ1lOU0VGYjI4eGFBQ1FPU08yR3NwN1l4NXhhYlE0OVFKTXo4RkFhOGxCLU9ZTGVONHZXeG1kbW5SajFB?oc=5",
-      "sent_at": "2026-10-14T01:00:58Z"
-    },
-    {
       "url": "https://www.telegraph.co.uk/news/2026/10/14/strait-of-hormuz-iran-war-shipping-oil-gas-diesel-drones/",
       "sent_at": "2026-10-15T01:01:34Z"
     },
@@ -335,6 +311,26 @@
     {
       "url": "https://www.ajc.com/news/2026/11/israeli-strikes-and-gunfire-in-gaza-kill-5-people-and-other-mideast-news/",
       "sent_at": "2026-11-11T01:01:10Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQT2RIVTlPbjc1a2hmTlBYZzVWX015V1otQ2FEYzVKMW8wanBwRkZ5dkdudzVaSHA1WFg1bmNEaTZFWEM2MWxCeHloVEN5NG8waFdCTlhFVDV5VVVTZDlYRTJ4RDEtRDlTdjVGcFp2UzloZlA1VlRaSVZjNzZuRk9FR3kyQWxOY2FndUR3VUtHczEwSVhCM3dZZVVjM1htdlZnSFAzcXVmRTBJeWtTS0pDcGxWTjRpcl93aDFvOC03ZDN0a20wSlh0QmIzVU9iTF91OFJ2T181bFRMR3VtUXpicG83STJtR29UQ1E?oc=5",
+      "sent_at": "2026-11-13T01:01:02Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQcDQ2cWxyeTFpazFaX1ZNM2RoS0t2ZVpEa0JpMElTZVFMUElROEF5c20tMlU0dEszWFlEdkhfR2VOb3hEQmo3MjRtdVlSaEhkZnpKXzExbE5QcXItQ3Z6REoyY1Fpak9IUUplYWp6NTQ2UjBiNVk1WDN0MmJjaFRkOHNLdDYxMU9xOWhuMnVaTlNiVXJNTlhLYV9EZEpnd1oxYmF0cG82b2VkMURkYnkzZkZBX0hhWHM?oc=5",
+      "sent_at": "2026-11-13T01:01:02Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQ3JZelY2dVZoOF9DSkdScl9DNEYwWFBoLWE5RjNmTmxCTmVvaXppenY0dG9jNmEtWERGOUw3Zll4VWNPQzMyVk5kblZxS3FnTEl0Y0c5LS1NMkljSHUzTl95WGdxc3Z0Q2VxeWt0QlE4OHUyZmo3Rl8tWUtCYy1tMWpKUDQ5S1RTeUZOOVoxbmdpUVlkWFJqMThUaFJNbVk3Q1RlODZUUkQ1dmpKTmVrd2RTWFBDdFg5eF8xbkp1TXF5LTFrdXfSAcsBQVVfeXFMT3J0VlBoc2VnMUFXOF9hZWxuZGE3R28zWk9YNS03dlRQYmpBTDJLWlI4NU1CR0twdmlfU1N0bzF6TTNXWklFMFAtdWtFTGpyVHV4aVNJUFYxY2tEcjM4YWl4WDZoWTlnQkJhbUlYSWQ4Zk5PQkVSa0tMZTZEY2N4aTFyYWtPdEVzcDJBRDVZc1FwWGx4MmNBQTZVd2VTeG55WTVPa3lkV0pQbHFGZi1idDl2RnlwWnFLc0o5amtmS18zenU0ejRHUW9tbFk?oc=5",
+      "sent_at": "2026-11-13T01:01:02Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcUhiRkhDX1hwZHRKdG9VOUhIZDRKNkZ1Qm1Sck9uOEVxNWhvNUpTZEdYUDNwTE5ZcGlVdVpjaEljLXVldkZ1M0ZQYVM1Y2xjZ0VtQzNjTE00c1pFMmtRcnIzWWZOb1JBdmJMc2NNUTdVUjl2aDQ3YndxZ3lBWkxIbFVYbUxmU0hDTjJXRjRXaTJaZ2dqUkRKT3NxNGstdzFfSmFMaWtjZ0M?oc=5",
+      "sent_at": "2026-11-13T01:01:02Z"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE90UUhSUERqT01MXzFzcXpRVnd3MU9FQUtSaGhxeHVCUFRETjlxQUh6dmRFM2FicnVHQ2NYWkh3UWtfOTJPQUcwb0NTT2JUY1FZTTZYZFpmdTdQMnNBbkIwYVd1SEc2N2lJNkpNejFzRlRDOWVucHZmUnJ1Wmw5V0E?oc=5",
+      "sent_at": "2026-11-13T01:01:02Z"
     }
   ]
 }

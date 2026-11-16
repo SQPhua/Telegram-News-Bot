@@ -1,10 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRF96Zlp1UnhwcVZpVWlDSkNnYkZZNTAySEM4TmxYRjNwTFRjWGdma3IyWlRwN09TdTI2clR3RzR3cFl5N1BZdVJhUkpSVDNzb1llM1pSemxKQVF2R3doa29mVWFXQlNRXzZERVJPMk53YXZIcFJOY2ROQnJqdWpjbTAxUVFjOXBJU3VLdENERG1WRWNUaGZ0V1RCZXBrVjdOWWF3b3pVV29rUnM?oc=5",
-      "sent_at": "2026-10-17T01:00:44Z"
-    },
-    {
       "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
       "sent_at": "2026-10-18T01:00:44Z"
     },
@@ -351,6 +347,26 @@
     {
       "url": "https://www.lokmattimes.com/international/two-tankers-hit-mines-in-strait-of-hormuz-iran-cautions-against-unauthorized-passage-a001-w02/",
       "sent_at": "2026-11-15T01:00:49Z"
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/news/defence/iran-claims-attack-on-us-radar-in-bahrain-as-tanker-fires-raise-hormuz-tensions/articleshow/135849352.cms",
+      "sent_at": "2026-11-16T01:00:51Z"
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/world/middle-east/iran-claims-three-tankers-hit-naval-mines-near-hormuz-warns-ships-against-entering-restricted-zone/articleshow/135849046.cms",
+      "sent_at": "2026-11-16T01:00:51Z"
+    },
+    {
+      "url": "https://7news.com.au/news/conflict/three-oil-tankers-burst-into-flames-after-hitting-naval-mines-in-strait-of-hormuz-c-23163962",
+      "sent_at": "2026-11-16T01:00:51Z"
+    },
+    {
+      "url": "https://theprint.in/world/three-tankers-aflame-in-the-strait-of-hormuz-after-hitting-mines-says-iranian-navy/3099100/",
+      "sent_at": "2026-11-16T01:00:51Z"
+    },
+    {
+      "url": "https://www.republicworld.com/world-news/three-oil-tankers-catch-fire-after-hitting-naval-mines-in-hormuz-claims-iran-s-navy-2026-11-15-141075",
+      "sent_at": "2026-11-16T01:00:51Z"
     }
   ]
 }

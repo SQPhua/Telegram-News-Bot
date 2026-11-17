@@ -1,14 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
-      "sent_at": "2026-10-18T01:00:44Z"
-    },
-    {
-      "url": "https://www.aljazeera.com/news-analysis/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
-      "sent_at": "2026-10-18T01:00:44Z"
-    },
-    {
       "url": "https://timesofindia.indiatimes.com/world/middle-east/two-oil-tankers-on-fire-after-hitting-mines-irans-guards/articleshow/135022868.cms",
       "sent_at": "2026-10-19T01:00:50Z"
     },
@@ -367,6 +359,26 @@
     {
       "url": "https://www.republicworld.com/world-news/three-oil-tankers-catch-fire-after-hitting-naval-mines-in-hormuz-claims-iran-s-navy-2026-11-15-141075",
       "sent_at": "2026-11-16T01:00:51Z"
+    },
+    {
+      "url": "https://www.lokmattimes.com/international/iran-claims-two-tankers-hit-mines-explode-in-hormuz-strait-amidst-us-tensions-a001-w02/",
+      "sent_at": "2026-11-17T01:01:37Z"
+    },
+    {
+      "url": "https://www.deccanchronicle.com/west-asia/middle-east-tensions-escalate-as-houthis-blame-saudi-arabia-for-strikes-2004898",
+      "sent_at": "2026-11-17T01:01:37Z"
+    },
+    {
+      "url": "https://www.middleeastmonitor.com/20261116-iran-says-2-oil-tankers-hit-mines-near-strait-of-hormuz-1-sinks/",
+      "sent_at": "2026-11-17T01:01:37Z"
+    },
+    {
+      "url": "https://www.ajc.com/news/2026/11/third-american-aircraft-carrier-arrives-in-the-middle-east-and-other-mideast-news/",
+      "sent_at": "2026-11-17T01:01:37Z"
+    },
+    {
+      "url": "https://www.ajc.com/news/2026/11/houthis-accuse-saudi-arabia-of-strikes-that-killed-3-including-a-child-and-other-mideast-news/",
+      "sent_at": "2026-11-17T01:01:37Z"
     }
   ]
 }

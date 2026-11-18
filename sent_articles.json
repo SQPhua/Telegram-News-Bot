@@ -1,14 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://timesofindia.indiatimes.com/world/middle-east/two-oil-tankers-on-fire-after-hitting-mines-irans-guards/articleshow/135022868.cms",
-      "sent_at": "2026-10-19T01:00:50Z"
-    },
-    {
-      "url": "https://www.aljazeera.com/news/2026/10/18/iran-says-two-tankers-catch-fire-after-hitting-mines-in-strait-of-hormuz",
-      "sent_at": "2026-10-19T01:00:50Z"
-    },
-    {
       "url": "https://www.ndtv.com/world-news/iran-guards-say-2-violating-oil-tankers-set-ablaze-in-strait-of-hormuz-12210436",
       "sent_at": "2026-10-21T01:00:50Z"
     },
@@ -379,6 +371,18 @@
     {
       "url": "https://www.ajc.com/news/2026/11/houthis-accuse-saudi-arabia-of-strikes-that-killed-3-including-a-child-and-other-mideast-news/",
       "sent_at": "2026-11-17T01:01:37Z"
+    },
+    {
+      "url": "https://www.timesnownews.com/world/middle-east/tanker-hit-twice-in-strait-of-hormuz-crew-missing-as-irgc-claims-more-ships-struck-mines-article-156524297",
+      "sent_at": "2026-11-18T01:01:22Z"
+    },
+    {
+      "url": "https://www.arkansasonline.com/news/2026/nov/17/third-us-aircraft-carrier-arrives-in-middle-east/",
+      "sent_at": "2026-11-18T01:01:22Z"
+    },
+    {
+      "url": "https://www.indiatvnews.com/news/world/oil-tanker-transiting-strait-of-hormuz-attacked-near-oman-fourth-incident-in-24-hours-latest-updates-2026-11-17-1059635",
+      "sent_at": "2026-11-18T01:01:22Z"
     }
   ]
 }

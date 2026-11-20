@@ -1,10 +1,6 @@
 {
   "sent": [
     {
-      "url": "https://www.ndtv.com/world-news/iran-guards-say-2-violating-oil-tankers-set-ablaze-in-strait-of-hormuz-12210436",
-      "sent_at": "2026-10-21T01:00:50Z"
-    },
-    {
       "url": "https://www.middleeastmonitor.com/20261021-irans-revolutionary-guard-says-3-oil-tankers-hit-naval-mines-in-strait-of-hormuz/",
       "sent_at": "2026-10-22T01:00:52Z"
     },
@@ -391,6 +387,14 @@
     {
       "url": "https://www.indiatoday.in/world/story/strait-of-hormuz-iran-three-tankers-sea-mines-route-violations-3041197-2026-11-18",
       "sent_at": "2026-11-19T01:01:25Z"
+    },
+    {
+      "url": "https://www.pilotonline.com/2026/11/19/missile-attack-riyadh-mideast-news/",
+      "sent_at": "2026-11-20T01:00:50Z"
+    },
+    {
+      "url": "https://www.republicworld.com/world-news/iran-says-3-oil-tankers-catch-fire-after-hitting-mines-east-of-strait-of-hormuz-2026-11-19-141346",
+      "sent_at": "2026-11-20T01:00:50Z"
     }
   ]
 }
